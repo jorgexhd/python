@@ -1,0 +1,11 @@
+from operaciones import suma
+from operaciones import resta
+from operaciones import multiplicar
+from operaciones import dividir
+
+a, b, c, d = (26, 16, 7, 22)
+
+print("El resultado de la suma es", suma(a, b))
+print("El resultado de la resta es", resta(a, b))
+print("El resultado de la multiplicación es", multiplicar(a, b))
+print("El resultado de la división es", dividir(a, b))
