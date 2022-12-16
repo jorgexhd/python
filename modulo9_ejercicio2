@@ -1,0 +1,10 @@
+from functools import reduce
+
+def suma_impares(lista):
+    resultado = list(filter((lambda x: x % 2), lista))
+    print(resultado)
+    resultado = reduce( (lambda x, y: x + y), resultado)
+
+lista = list(range(250))
+
+suma_impares(lista)
