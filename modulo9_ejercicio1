@@ -1,0 +1,11 @@
+dimepaises = input("Introduzca una lista de países separados por comas: ")
+
+paises = [pais for pais in dimepaises.split(",")]
+
+paises_sin_repetir = set(paises)
+
+paises = list(paises_sin_repetir)
+
+paises.sort()
+
+print(", ".join(paises))
