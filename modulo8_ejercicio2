@@ -1,0 +1,22 @@
+from pickle import *
+
+class Vehiculo:
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+
+    def __str__(self):
+        return self.marca + " " + self.modelo
+
+mi_vehiculo = Vehiculo("Ford", "Focus")
+print(mi_vehiculo)
+
+file = open('mi_vehiculo', 'w+b')
+
+dump(mi_vehiculo, file)
+
+file.seek(0)
+nuevo_mi_vehiculo = load(file)
+
+print(nuevo_mi_vehiculo)
+file.close()
