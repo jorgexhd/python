@@ -1,0 +1,28 @@
+import tkinter
+from tkinter import *
+
+
+def seleccionar():
+    monitor.config(text="{}".format(opcion.get()))
+def reset():
+    opcion.set(None)
+    monitor.config(text="")
+
+root = tkinter.Tk()
+opcion = tkinter.StringVar()
+opcion.set(None)
+Radiobutton(root, text="iPhone", variable=opcion, value='iPhone', command=seleccionar).pack(anchor=W)
+
+Radiobutton(root, text="Watch", variable=opcion, value='Watch', command=seleccionar).pack(anchor=W)
+
+Radiobutton(root, text="iPad", variable=opcion, value='iPad', command=seleccionar).pack(anchor=W)
+
+Radiobutton(root, text="AirPods", variable=opcion, value='AirPods', command=seleccionar).pack(anchor=W)
+
+Radiobutton(root, text="Macbook", variable=opcion, value='Macbook', command=seleccionar).pack(anchor=W)
+
+monitor = Label(root)
+monitor.pack()
+Button(root, text="Reiniciar", command=reset).pack()
+
+root.mainloop()
