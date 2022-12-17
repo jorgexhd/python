@@ -1,0 +1,15 @@
+import tkinter
+from tkinter import *
+
+window = Tk()
+elemento = StringVar()
+listbox = Listbox(window)
+
+for lista in ["Nikon", "Panasonic", "Canon", "Sony", "Lumix"]:
+    listbox.insert(END, lista)
+
+listbox.pack()
+label =  Label(text="Lista de marcas de cámaras fotográficas")
+label.pack()
+
+window.mainloop()
